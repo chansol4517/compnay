@@ -1,6 +1,6 @@
 header {
 	width: 100%;
-	padding: 20px 10vw 20px;
+	padding: 20px 15vw;
 	border-bottom: 1px solid #ddd;
 	display: flex;
 	flex-wrap: wrap;
@@ -24,7 +24,7 @@ header {
 			gap: 60px;
 			justify-content: flex-end;
 			order: 2;
-			font: 450 0.8rem/1 "orbitron";
+			font: 500 0.8rem/1 "orbitron";
 			letter-spacing: 1px;
 			color: #333;
 		}
@@ -36,7 +36,7 @@ header {
 			order: 1;
 			margin-bottom: 20px;
 			font-size: 0.8rem;
-			opacity: 0.6;
+			opacity: 0.5;
 		}
 	}
 
@@ -49,8 +49,26 @@ header {
 	}
 }
 
+.mobilePanel {
+	width: 260px;
+	height: 100vh;
+	position: fixed;
+	background: rgba(255, 255, 255, 0.5);
+	backdrop-filter: blur(10px);
+	z-index: 5;
+	transition: 0.5s;
+	top: 0px;
+	left: -260px;
+
+	&.on {
+		left: 0px;
+	}
+}
+
 @media screen and (max-width: $tablet) {
 	header {
+		padding: 16px 10vw;
+
 		h1 {
 			font-size: 1.4rem;
 		}
