@@ -15,6 +15,9 @@ scroll_btns.forEach((btn, idx) => {
 	btn.addEventListener("click", () => {
 		//Anime로 클릭한 버튼 순번으로 posArr에서 이동할 위치값을 적용
 		new Anime(window, { scroll: posArr[idx] });
+
+		scroll_btns.forEach(el => el.classList.remove("on"));
+		scroll_btns[idx].classList.add("on");
 	});
 });
 
